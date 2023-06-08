@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /*
-Problem: https://www.hackerrank.com/challenges/30-linked-list/p
+Problem: https://www.hackerrank.com/challenges/staircase/
  */
 
 class Result {

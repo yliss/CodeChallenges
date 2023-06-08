@@ -2,7 +2,7 @@ package dataStructures.DaysOfCode.LinkedList;
 import java.util.Scanner;
 
 /*
-Problem: https://www.hackerrank.com/challenges/30-linked-list/p
+Problem: https://www.hackerrank.com/challenges/30-linked-list/
  */
 class Node {
     int data;
