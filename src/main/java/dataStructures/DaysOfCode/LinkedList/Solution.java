@@ -1,11 +1,9 @@
 package dataStructures.DaysOfCode.LinkedList;
+import java.util.Scanner;
+
 /*
 Problem: https://www.hackerrank.com/challenges/30-linked-list/p
  */
-
-
-import java.util.Scanner;
-
 class Node {
     int data;
     Node next;
