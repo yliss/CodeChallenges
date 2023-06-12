@@ -1,4 +1,4 @@
-package dataStructures.DaysOfCode.Staircase;
+package problemSolving.Staircase;
 
 import java.io.BufferedReader;
 import java.io.IOException;

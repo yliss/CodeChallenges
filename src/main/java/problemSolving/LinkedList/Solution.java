@@ -1,4 +1,4 @@
-package dataStructures.DaysOfCode.LinkedList;
+package problemSolving.LinkedList;
 import java.util.Scanner;
 
 /*
