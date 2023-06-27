@@ -1,7 +1,9 @@
 package dataStructures.queuesAndStacks.BST.practiceHeight;
 
-import java.util.*;
-import java.io.*;
+import java.util.Scanner;
+/*
+Problem: https://www.hackerrank.com/challenges/30-binary-search-trees
+ */
 class Node{
     Node left,right;
     int data;
@@ -11,44 +13,32 @@ class Node{
     }
 }
 class Solution{
-/*
-7
-3
-5
-2
-1
-4
-6
-7
-**
-9
-20
-50
-35
-44
-9
-15
-62
-11
-13
- */
+
     public static int getHeight(Node root){
-        int leftCount=search(root.left,0);
-        int rightCount=search(root.right, 0 );
+        int leftCount=searchL(root.left,1);
+        int rightCount=searchR(root.right, 1 );
         return leftCount > rightCount? leftCount: rightCount;
     }
-    public static int search(Node root, int count){
+    public static int searchL(Node root, int count){
         if (root == null)
             return count;
 
         if (root.left !=null){
             count ++;
-            count= search(root.left,count);
+            count= searchL(root.left,count);
+            return count;
         }
+        return count;
+    }
+
+    public static int searchR(Node root, int count){
+        if (root == null)
+            return count;
 
         if (root.right !=null){
             count ++;
-            count= search(root.right,count);
+            count= searchR(root.right,count);
+            return count;
         }
         return count;
     }
