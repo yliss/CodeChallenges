@@ -24,8 +24,19 @@ class Result {
      */
 
     public static int flippingMatrix(List<List<Integer>> matrix) {
-        // Write your code here
-
+        Objects.requireNonNull(matrix);
+        if (matrix.size() == 0) return 0;
+        int m = matrix.size(), n = matrix.get(0).size();
+        int ans = 0;
+        for (int i = 0; i < m/2; i++) {
+            for (int j = 0; j < n/2; j++) {
+                List<Integer> up = matrix.get(i), down = matrix.get(n-i-1);
+                int maxUpper = Math.max(up.get(j), up.get(n-j-1));
+                int maxBelow = Math.max(down.get(j), down.get(n-j-1));
+                ans += Math.max(maxUpper, maxBelow);
+            }
+        }
+        return ans;
     }
 
 }
